@@ -1,0 +1,330 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightgray;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.back-vid{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.cover{
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: #526bd82d;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 70px;
+    background-color: rgba(225, 225, 225, 0.121);
+    backdrop-filter: blur(5px); /*ახალი პრაქტიკა ბლურის მიცემა*/
+    box-shadow: 0 0 15px #72a1de98;
+    z-index: 999;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.left img{
+    width: 40px;    
+    margin: 0 15px;
+}
+
+header ul{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 84, 0.326);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px #72a1de98;
+}
+
+header ul li{
+    list-style: none;
+
+}
+
+header ul a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    transition: 0.3s;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+header ul a:hover{
+    text-shadow: 0 0 30px black; /* uqmnis texts crdilebs */
+    opacity: 80%;
+}
+
+.box__icons{
+    display: flex;
+    gap: 40px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    width: 34px;
+    height: 35px;
+    border: 2px solid #72a1de98;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.icons:hover{
+    background-color: #72a1de98;
+    color: black;
+    box-shadow: 0 0 15px #72a1de98;
+}
+
+.blackhole__box{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    z-index: -1;
+    mix-blend-mode: lighten; /*amis daxmarebit videoebi ertmanets edebian da ar ushlian ertmanets, მოკლედ ის აძლევს ისეთ ფერს რომ ბექგრაუნდები ერთმანეთს ერწყმეოდეს*/
+}
+
+.blackhole__box video{
+    width: 100%;
+    margin-top: -23.5%;
+}
+
+.hero{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero__info{
+    position: absolute;
+    left: 5%;
+}
+
+.hero__info div{
+    color: #72a1de98;
+    padding: 8px 5px;
+    border-radius: 50px;
+    border: 1px solid #72a1de98;
+    width: 240px;
+    background-color: #2200493d;
+    box-shadow: 0 0 5px #72a1de98;
+}
+
+.hero__info h1{
+    font-size: 60px;
+    max-width: 600px;
+    font-weight: 700;
+    line-height: 60px;
+    margin-top: 40px;
+    margin-bottom: 30px;   
+}
+
+.hero__info p{
+    max-width: 550px;
+    line-height: 25px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.hero__info button{
+    color: white;
+    padding: 15px 35px;
+    border-radius: 10px;
+    border: 1px solid #72a1de98;
+    background-color: #2200493d;
+    box-shadow: 0 0 5px #72a1de98;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero__info button:hover{
+    box-shadow: 0 0 15px #72a1de98;
+}
+
+/* gradient animatiom */
+.gradient{
+    background: linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd, #2a46ff, #0099ff, #008baa);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2.5s linear infinite;
+}
+
+@keyframes animateGradient{
+    to{
+        background-position: 200%;
+    }
+}
+
+.astronaut{
+    position: absolute;
+    right: 5%;
+    height: 400px;
+    mix-blend-mode: lighten;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.info__card{
+    display: flex;
+    align-items: center;
+    max-width: 120px;
+}
+
+.info__card h1{
+    background: linear-gradient(to right, #008baa, #7e42a7, #6600c5, #6070fd, #2a46ff, #0099ff, #008baa);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animateGradient 2.5s linear infinite;
+    font-size: 55px;
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.info__card p{
+    color: white;
+    font-size: 20px; 
+}
+
+
+@media (max-aspect-ratio: 16/9){
+    .back-vid{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 16/9){
+    .back-vid{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .blackhole__box video{
+        margin-top: -20%;
+    }
+
+    .hero__info h1{
+        font-size: 40px;
+        max-width: 400px;
+    }
+
+    .hero__info p{
+        max-width: 300px;
+    }
+
+    .hero img{
+        height: 300px;
+    }
+
+    .about{
+        padding: 10px;
+        width: 90%;
+    }
+
+    .info__card h1{
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    body{
+        overflow: auto;
+    }
+    header ul{
+        display: none;
+    }
+
+    .blackhole__box video{
+        margin-top: -18%;
+    }
+
+    .about{
+        max-width: 80%;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .hero{
+        flex-direction: column;
+    }
+    .hero__info{
+        bottom: 0px;
+    }
+
+    .hero img{
+        height: 200px;
+        right: 100px;
+        top: 70px;
+    }
+
+    .container{
+        height: 100%;
+    }
+    .box__icons{
+        gap: 10px;
+    }
+    .hero__info h1{
+        margin-top: 20px;
+        margin-bottom: 20px;  
+    }
+    .astronaut{
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .hero__info h1{
+        font-size: 35px;
+        line-height: 120%;
+        max-width: 400px;
+    }
+    .left h2{
+        font-size: 20px;
+    }
+    .hero__info p{
+        font-size: 14px;
+    }
+}
